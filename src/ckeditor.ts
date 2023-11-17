@@ -35,6 +35,7 @@ import {
 import { TextTransformation } from "@ckeditor/ckeditor5-typing";
 import { Base64UploadAdapter } from "@ckeditor/ckeditor5-upload";
 import MathType from "@wiris/mathtype-ckeditor5";
+import { HtmlEmbed } from "@ckeditor/ckeditor5-html-embed";
 
 // You can read more about extending the build with additional plugins in the "Installing plugins" guide.
 // See https://ckeditor.com/docs/ckeditor5/latest/installation/plugins/installing-plugins.html for details.
@@ -71,7 +72,8 @@ class Editor extends ClassicEditor {
 		TableCellProperties,
 		TableColumnResize,
 		TableToolbar,
-		TextTransformation
+		TextTransformation,
+		HtmlEmbed
 	];
 
 	public static override defaultConfig = {
@@ -97,7 +99,8 @@ class Editor extends ClassicEditor {
 				"specialCharacters",
 				"subscript",
 				"superscript",
-				"style"
+				"style",
+				"htmlEmbed"
 			]
 		},
 		language: "en",
